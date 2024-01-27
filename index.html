@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Components SASS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <script src="script/script.js"></script>
+
+  <section id="one">
+    <div>
+      <span onclick="handleScrollImages('up')"></span>
+      <div >
+        <img class="scroll" onclick="handleChangeImage(this.src)" src="assets/1.jpeg">
+        <img class="scroll" onclick="handleChangeImage(this.src)" src="assets/2.jpeg">
+        <img class="scroll" onclick="handleChangeImage(this.src)" src="assets/3.jpeg">
+        <img class="scroll" onclick="handleChangeImage(this.src)" src="assets/4.jpeg">
+        <img class="scroll" onclick="handleChangeImage(this.src)" src="assets/5.jpeg">
+      </div>
+      <span onclick="handleScrollImages('down')"></span>
+    </div>
+    
+    <div>
+      <img id="imagePrincipal" src="assets/1.jpeg">
+    </div>
+  </section>
+
+  <section id="two">
+    <img class="xs" src="https://i.pravatar.cc/300" alt="">
+    <img class="sm" src="https://i.pravatar.cc/300" alt="">
+    <img class="md" src="https://i.pravatar.cc/300" alt="">
+  </section>
+</body>
+</html>
