@@ -194,6 +194,7 @@ section#four {
       transform: translateX(-100vw);
       transition: transform 2s ease;
       justify-content: space-between;
+      z-index: 2;
 
       p {
         font-size: 2rem;
@@ -208,6 +209,37 @@ section#four {
         display: flex;
         transform: translateX(0vw) ;
       }
+    }
+  }
+}
+
+section#five {
+  gap: 1rem;
+
+  span {
+    background-color: var(--gray);
+    padding: 0.5rem;
+    border-radius: 100%;
+    font-size: 1.5rem;
+    color: var(--white);
+    cursor: pointer;
+
+    div {
+      display: none;
+      position: absolute;
+      top: -3.5rem;
+      right: -7.5rem;
+      background-color: var(--gray-ligth);
+      padding: 1rem;
+      border-radius: 10%;
+      border-bottom-left-radius: 0;
+      z-index: 2;
+    }
+  }
+
+  span:hover {
+    div {
+      display: flex;
     }
   }
 }
