@@ -243,3 +243,65 @@ section#five {
     }
   }
 }
+
+section#six {
+  div {
+    z-index: 1;
+    overflow: hidden;
+
+    span {
+      position: absolute;
+      z-index: 2;
+      min-width: 2rem;
+      min-height: 2rem;
+      border-bottom: 5px solid var(--black);
+      border-right: 5px solid var(--black);
+      cursor: pointer;
+
+      @media (orientation: portrait) {
+        min-width: 1rem;
+        min-height: 1rem;
+        border-bottom: 3px solid var(--black);
+        border-right: 3px solid var(--black);
+      }  
+
+      &:first-of-type {
+        rotate: 135deg;
+        top: 10;
+        left: 0;
+        margin-left: 2rem;
+
+        @media (orientation: portrait) {
+          margin-left: 0.5rem;
+        }  
+      }
+
+      &:last-of-type {
+        rotate: -45deg;
+        top: 10;
+        right: 0;
+        margin-right: 2rem;
+
+        @media (orientation: portrait) {
+          margin-right: 0.5rem;
+        } 
+      }
+
+      @media (orientation: portrait) {
+          padding: 0.5rem;
+      }  
+    }
+    
+    div {
+      z-index: 1;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        transform: translateX(0);
+        transition: all 0.5s ease-in-out;
+      }
+    }
+  }
+}
