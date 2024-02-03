@@ -181,14 +181,25 @@ section#four {
     border-radius: 10%;
     text-decoration: none;
     color: var(--black);
+    
+    @media (orientation: portrait) {
+      font-size: 1rem;
+    }
+
   }
 
   div {
+    width: 100%;
+
+    a:hover {
+      opacity: 0.7;
+    }
+
     div {
       // display: none;
       position: absolute;
-      width: 80vw;
-      height: 80vh;
+      width: 100%;
+      height: auto;
       flex-direction: column;
       font-size: 1.5rem;
       padding: 3rem;
@@ -201,10 +212,32 @@ section#four {
       justify-content: space-between;
       z-index: 2;
 
-      p {
-        font-size: 2rem;
+      @media (orientation: portrait) {
+        font-size: 1rem;
       }
 
+      p {
+        font-size: 2rem;
+
+        @media (orientation: portrait) {
+          font-size: 1rem;
+        }
+      }
+
+      a {
+        width: 50%;
+        border-radius: 3%;
+        display: flex;
+        justify-content: center;
+
+        @media (orientation: portrait) {
+          padding: 1rem;
+        }
+      }
+
+      a:hover {
+        opacity: 0.7;
+      }
     }
   }
 
