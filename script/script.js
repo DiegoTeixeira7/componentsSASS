@@ -3,25 +3,29 @@ function handleChangeImage(src, id="imagePrincipal") {
   image.src = src;
 }
 
-var translateYCurrent = 0;
+var translateCurrent = 0;
 
 function handleScrollImages(position) {
   const images = document.querySelectorAll('.scroll')
 
-  if(position === 'up') {
-    translateYCurrent -= 50
-  } else {
-    translateYCurrent += 50
+  if(position === 'up' || position === 'right') {
+    translateCurrent -= 50
+  } else if(position === 'down' || position === 'left') {
+    translateCurrent += 50
   }
 
-  if(translateYCurrent < -150) {
-    translateYCurrent = -150
-  } else if(translateYCurrent > 150) {
-    translateYCurrent = 150
+  if(translateCurrent < -150) {
+    translateCurrent = -150
+  } else if(translateCurrent > 150) {
+    translateCurrent = 150
   }
 
   images.forEach(function(img) {
-    img.style.transform = 'translateY(' + translateYCurrent + 'px)';
+    if(position === 'up' || position === 'down') {
+      img.style.transform = 'translate(0,' + translateCurrent + 'px)';
+    } else if(position === 'right' || position === 'left') {
+      img.style.transform = 'translate(' + translateCurrent + 'px,0)';
+    }
   });
 }
 
