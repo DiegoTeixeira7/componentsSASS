@@ -30,7 +30,7 @@ let indexImageCarrossel = 0
 function handleMoveCarrossel(position) {
   const imagesSrc = ['assets/1.webp', 'assets/2.webp', 'assets/3.webp']
 
-  if(position === 'up') {
+  if(position === 'right') {
     indexImageCarrossel = indexImageCarrossel === (imagesSrc.length - 1) ? 0 : indexImageCarrossel + 1
   } else {
     indexImageCarrossel = indexImageCarrossel === 0 ? imagesSrc.length - 1 : indexImageCarrossel - 1
@@ -45,6 +45,4 @@ function handleMoveCarrossel(position) {
     animatedImage.style.opacity = 1;
     // animatedImage.style.transform = "translateX(0)"
   }, 500);
-
-  
 }
