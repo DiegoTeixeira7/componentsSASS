@@ -41,15 +41,20 @@ main, header, menu, nav, section, footer, div, span {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-main, header, footer {
   flex-direction: column;
 }
 
 section {
   padding: 0 var(--sidepad);
-  margin-bottom: 10rem;
+  margin-top: 10rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+
+  @media (orientation: portrait) {
+    font-size: 2rem;
+  }
 }
 
 $sizes: ("xs": 100px, "sm":200px, "md":300px);
@@ -63,112 +68,125 @@ $sizes: ("xs": 100px, "sm":200px, "md":300px);
 }
 
 section#one {
-  flex-direction: row;
-  gap: 4rem;
+  gap: 2rem;
 
-  @media (orientation: portrait) {
-    flex-direction: column-reverse;
-  }
-  
   div {
-    span {
-      z-index: 2;
-      min-width: 1rem;
-      min-height: 1rem;
-      border-bottom: 1px solid var(--black);
-      border-right: 1px solid var(--black);
-      rotate: 45deg;
-      cursor: pointer;
-
-      &:first-of-type {
-          rotate: 225deg;
-      }
-
-      @media (orientation: portrait) {
-          padding: 0.5rem;
-      }  
-    }
-
-    #right, #left {
-      display: none;
-
-      @media (orientation: portrait) {
-        display: flex;
-      } 
-    }
-
-    #left {
-      rotate: -45deg;
-    }
-
-    #right {
-      rotate: 135deg;
-    }
-
-    #up, #down {
-      display: flex;
-
-      @media (orientation: portrait) {
-        display: none;
-      } 
-    }
-  }
-
-  div:first-child {
-    flex-direction: column;
-    gap: 2rem;
-    padding: 2rem 0rem;
-    overflow: hidden;
-    z-index: 1;
+    flex-direction: row;
+    gap: 4rem;
 
     @media (orientation: portrait) {
-      flex-direction: row;
-    }  
-
+      flex-direction: column-reverse;
+    }
+    
     div {
-      z-index: 1;
-      width: 15rem;
-      height: 30rem;
-      transition: transform 0.5s ease;
-      border-radius: 10%;
+      span {
+        z-index: 2;
+        min-width: 1rem;
+        min-height: 1rem;
+        border-bottom: 1px solid var(--black);
+        border-right: 1px solid var(--black);
+        rotate: 45deg;
+        cursor: pointer;
+
+        &:first-of-type {
+            rotate: 225deg;
+        }
+
+        @media (orientation: portrait) {
+            padding: 0.5rem;
+        }  
+      }
+
+      #right, #left {
+        display: none;
+
+        @media (orientation: portrait) {
+          display: flex;
+        } 
+      }
+
+      #left {
+        rotate: -45deg;
+      }
+
+      #right {
+        rotate: 135deg;
+      }
+
+      #up, #down {
+        display: flex;
+
+        @media (orientation: portrait) {
+          display: none;
+        } 
+      }
+    }
+
+    div:first-child {
       flex-direction: column;
-      gap: 1rem;
+      gap: 2rem;
+      padding: 2rem 0rem;
       overflow: hidden;
+      z-index: 1;
 
       @media (orientation: portrait) {
         flex-direction: row;
-        height: 10rem;
-        width: 18rem;
-      } 
+      }  
 
-      img {
-        width: 10rem;
-        height: 10rem;
-        cursor: pointer;
-      }
+      div {
+        z-index: 1;
+        width: 15rem;
+        height: 30rem;
+        transition: transform 0.5s ease;
+        border-radius: 10%;
+        flex-direction: column;
+        gap: 1rem;
+        overflow: hidden;
 
-      img:hover {
-        opacity: 0.7;
+        @media (orientation: portrait) {
+          flex-direction: row;
+          height: 10rem;
+          width: 18rem;
+        } 
+
+        img {
+          width: 10rem;
+          height: 10rem;
+          cursor: pointer;
+        }
+
+        img:hover {
+          opacity: 0.7;
+        }
       }
     }
-  }
-  
-  div img {
-    border-radius: 10%;
+    
+    div img {
+      border-radius: 10%;
+    }
   }
 }
 
 section#two {
   gap: 2rem;
 
-  @media (orientation:portrait) {
-    flex-direction: column;
+  div {
+    gap: 2rem;
+    flex-direction: row;
+
+    @media (orientation:portrait) {
+      flex-direction: column;
+    }
   }
 }
 
 section#tree {
   flex-direction: column;
   gap: 1rem;
+
+  h1 {
+    margin-bottom: 2rem;
+  }
 
   div {
     flex-direction: column;
@@ -210,6 +228,7 @@ section#tree {
 
 section#four {
   flex-direction: column;
+  gap: 4rem;
 
   a {
     font-size: 1.5rem;
@@ -289,7 +308,7 @@ section#four {
 }
 
 section#five {
-  gap: 1rem;
+  gap: 4rem;
 
   span {
     background-color: var(--gray);
@@ -321,6 +340,7 @@ section#five {
 
 section#six {
   padding: 0;
+  gap: 4rem;
 
   div {
     z-index: 1;
@@ -384,33 +404,40 @@ section#six {
 }
 
 section#seven {
-  justify-content: space-around;
-
-  @media (orientation: portrait) {
-    flex-direction: column;
-    gap: 4rem;
-  }  
+  gap: 4rem;
+  margin-bottom: 10rem;
 
   div {
-    width: 25rem;
-    height: 30rem;
-    background-color: var(--gray-ligth);
-    border-radius: 10%;
-    cursor: pointer;
-  }
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
 
-  div:hover {
-    img {
-      transform: scale(1.15);
-      filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, 0.2));
+    @media (orientation: portrait) {
+      flex-direction: column;
+      gap: 4rem;
+    }  
+
+    div {
+      width: 25rem;
+      height: 30rem;
+      background-color: var(--gray-ligth);
+      border-radius: 10%;
+      cursor: pointer;
     }
-  }
 
-  img {
-    max-width: 30rem;
-    max-height: 40rem;
-    filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0.2));
-    transform-origin: bottom;
-    transition: transform .5s var(--ease), filter 0.5s;
+    div:hover {
+      img {
+        transform: scale(1.15);
+        filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, 0.2));
+      }
+    }
+
+    img {
+      max-width: 30rem;
+      max-height: 40rem;
+      filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0.2));
+      transform-origin: bottom;
+      transition: transform .5s var(--ease), filter 0.5s;
+    }
   }
 }

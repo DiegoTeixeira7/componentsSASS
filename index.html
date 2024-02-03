@@ -10,32 +10,40 @@
   <script src="script/script.js"></script>
 
   <section id="one">
+    <h1>Slider 1</h1>
     <div>
-      <span id="up" onclick="handleScrollImages('up')"></span>
-      <span id="right" onclick="handleScrollImages('right')"></span>
-      <div >
-        <img class="scroll" onclick="handleChangeImage(this.src)" src="assets/1.jpeg">
-        <img class="scroll" onclick="handleChangeImage(this.src)" src="assets/2.jpeg">
-        <img class="scroll" onclick="handleChangeImage(this.src)" src="assets/3.jpeg">
-        <img class="scroll" onclick="handleChangeImage(this.src)" src="assets/4.jpeg">
-        <img class="scroll" onclick="handleChangeImage(this.src)" src="assets/5.jpeg">
+      <div>
+        <span id="up" onclick="handleScrollImages('up')"></span>
+        <span id="right" onclick="handleScrollImages('right')"></span>
+        <div >
+          <img class="scroll" onclick="handleChangeImage(this.src)" src="assets/1.jpeg">
+          <img class="scroll" onclick="handleChangeImage(this.src)" src="assets/2.jpeg">
+          <img class="scroll" onclick="handleChangeImage(this.src)" src="assets/3.jpeg">
+          <img class="scroll" onclick="handleChangeImage(this.src)" src="assets/4.jpeg">
+          <img class="scroll" onclick="handleChangeImage(this.src)" src="assets/5.jpeg">
+        </div>
+        <span id="down" onclick="handleScrollImages('down')"></span>
+        <span id="left" onclick="handleScrollImages('left')"></span>
       </div>
-      <span id="down" onclick="handleScrollImages('down')"></span>
-      <span id="left" onclick="handleScrollImages('left')"></span>
-    </div>
-    
-    <div>
-      <img id="imagePrincipal" src="assets/1.jpeg">
+      
+      <div>
+        <img id="imagePrincipal" src="assets/1.jpeg">
+      </div>
     </div>
   </section>
 
   <section id="two">
-    <img class="xs" src="https://i.pravatar.cc/300" alt="">
-    <img class="sm" src="https://i.pravatar.cc/300" alt="">
-    <img class="md" src="https://i.pravatar.cc/300" alt="">
+    <h1>Tamanhos dinâmicos</h1>
+    <div>
+      <img class="xs" src="https://i.pravatar.cc/300" alt="">
+      <img class="sm" src="https://i.pravatar.cc/300" alt="">
+      <img class="md" src="https://i.pravatar.cc/300" alt="">
+    </div>
   </section>
 
   <section id="tree">
+    <h1>Accordion</h1>
+
     <div>
       <input type="radio" name="accordion" id="row-one">
       <label for="row-one">Pergunta 1</label>
@@ -62,6 +70,8 @@
   </section>
 
   <section id="four">
+    <h1>Modal</h1>
+
     <div id="modal">
       <a href="#modal">Abrir Modal</a>
       <div class="show-modal">
@@ -73,6 +83,8 @@
   </section>
 
   <section id="five">
+    <h1>Tooltip</h1>
+
     <span>?
       <div>
         <p>Tooltip!</p>
@@ -81,6 +93,8 @@
   </section>
 
   <section id="six">
+    <h1>Carrossel</h1>
+
     <div>
       <span onclick="handleMoveCarrossel('right')"></span>
       <div >
@@ -91,14 +105,18 @@
   </section>
 
   <section id="seven">
+    <h1>Cards</h1>
+
     <div>
-      <img src="assets/violao.webp" alt="">
-    </div>
-    <div>
-      <img src="assets/violao.webp" alt="">
-    </div>
-    <div>
-      <img src="assets/violao.webp" alt="">
+      <div>
+        <img src="assets/violao.webp" alt="">
+      </div>
+      <div>
+        <img src="assets/violao.webp" alt="">
+      </div>
+      <div>
+        <img src="assets/violao.webp" alt="">
+      </div>
     </div>
   </section>
 </body>
