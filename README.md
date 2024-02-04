@@ -19,7 +19,13 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 -  [SASS](https://sass-lang.com/)
 
 ### :arrow_forward: Em Execução:
-
+![Slider](assets/execution/1.gif)
+![Tamanhos dinâmicos](assets/execution/2.webp)
+![Accordion](assets/execution/3.gif)
+![Modal](assets/execution/4.gif)
+![Tooltip](assets/execution/5.gif)
+![Carrossel](assets/execution/6.gif)
+![Cards](assets/execution/7.gif)
 
 ### :information_source: Como usar:
 
